@@ -114,3 +114,8 @@ main {
   color: #fff;
   cursor: pointer;
 }
+
+.detalhe img {
+  width: 400px;
+  border-radius: 8px;
+}

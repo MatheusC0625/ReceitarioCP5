@@ -9,6 +9,12 @@ export async function getRecipes(): Promise<Recipe[]> {
   return data.recipes
 }
 
+export async function getRecipeById(id: string): Promise<Recipe> {
+  const response = await fetch(`${BASE_URL}/${id}`)
+  if (!response.ok) throw new Error('Erro ao carregar a receita')
+  return response.json()
+}
+
 export function getTotalTime(recipe: Recipe): number {
   return recipe.prepTimeMinutes + recipe.cookTimeMinutes
 }
