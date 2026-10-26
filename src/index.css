@@ -79,3 +79,22 @@ main {
   margin: 4px 0;
   color: #555;
 }
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filtros input,
+.filtros select {
+  padding: 8px;
+  font-size: 16px;
+}
