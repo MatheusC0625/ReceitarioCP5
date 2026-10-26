@@ -119,3 +119,8 @@ main {
   width: 400px;
   border-radius: 8px;
 }
+
+.mensagem {
+  text-align: center;
+  padding: 40px 0;
+}
