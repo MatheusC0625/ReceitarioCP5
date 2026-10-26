@@ -17,7 +17,16 @@ export default function Detalhe() {
   }, [id])
 
   if (loading) return <p>Carregando...</p>
-  if (error || !recipe) return <p>Não foi possível carregar a receita.</p>
+  if (error) return <p>Não foi possível carregar a receita.</p>
+
+  if (!recipe) {
+    return (
+      <section className="mensagem">
+        <h1>Receita não encontrada</h1>
+        <Link to="/">Voltar ao catálogo</Link>
+      </section>
+    )
+  }
 
   return (
     <article className="detalhe">
